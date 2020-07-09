@@ -1,6 +1,6 @@
 #include<cstdio>
 #include<cstring>
-#include<iostream>
+//#include<iostream>
 using namespace std;
 typedef unsigned int uint;
 int x[32],pc;
@@ -43,7 +43,7 @@ inline bool invalid(int pid)
 {
 	return val[pid&bin[16]]!=(pid>>16);
 }
-struct info{	//Êı¾İÔİ´æÇø 
+struct info{	//ÃŠÃ½Â¾ÃÃ”ÃÂ´Ã¦Ã‡Ã¸ 
 	int pid;
 	int pos,ppos;
 	uint op;
