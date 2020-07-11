@@ -6,7 +6,7 @@ int x[32],pc;
 int lst,lst2;
 int vis[32],upd[32],wt[32];
 const int inf=1e8;
-uint mem[1000000];
+uint mem[300000];
 uint bin[32];
 int _end,ti;
 int val[1<<16];
