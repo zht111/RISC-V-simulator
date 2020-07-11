@@ -1,5 +1,4 @@
 #include<cstdio>
-#include<cstring>
 //#include<iostream>
 using namespace std;
 typedef unsigned int uint;
@@ -752,7 +751,6 @@ void WB()
 }
 int main()
 {
-	memset(val,-1,sizeof val);
 //	freopen("pi.data","r",stdin);
 //	freopen("output.txt","w",stderr);
 	bin[0]=1;
@@ -760,18 +758,15 @@ int main()
 	for(int i=0;i<32;++i) --bin[i];
 	input();
 	pc=0;
-	for(ti=1;(!_end)||ti<=_end;++ti)
+	for(ti=1<<16;(!_end)||ti<=_end;++ti)
 	{
 		//IF(); ID(); EX(); MEM(); WB();
 		WB(); MEM(); EX(); ID(); IF();
-//if(!(ti&bin[16]))cerr<<ti<<endl;
 	}
 	printf("%u",((uint)x[10])&255u);
 	
-/*	
-cerr<<"\nclock="<<dec<<ti<<endl;
-cerr<<"count="<<dec<<cnt<<endl;
-cerr<<"branch prediction: "<<total-fail_cnt<<"/"<<total<<" ";
+/*
+cerr<<"\nbranch prediction: "<<total-fail_cnt<<"/"<<total<<" ";
 if(total) cerr<<100.0*(total-fail_cnt)/total<<"%"<<endl;
 */
 
